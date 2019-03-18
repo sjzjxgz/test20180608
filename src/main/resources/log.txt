@@ -1,0 +1,15 @@
+1. mysql  拦截器拦截sql,修改sql 实现分页
+
+   插入流程，在调用 prepare 函数之前，返回一个包含prepare 类的动态代理 proxy, proxy调用 prepare方法， pluginHandler ,invovoke 调用  interceptor 的interceptor
+   invocation.process() ,归还执行流程
+
+		Mybatis如何找到我们新增的拦截服务。
+		自定义的拦截服务应该在什么时间拦截查询动作。即什么时间截断Mybatis执行流。
+		自定义的拦截服务应该拦截什么样的对象。不能拦截什么样的对象。
+		自定义的拦截服务拦截的对象应该具有什么动作才能被拦截。
+		自定义的拦截服务如何获取上下文中传入的参数信息。
+		如何把简单查询，神不知鬼不觉的，无侵入性的替换为分页查询语句。
+		最后，拦截器应该如何交还被截断的Mybatis执行流。
+
+
+2. git  test 20190318
